@@ -1,9 +1,12 @@
 import React from 'react' // Anything inside this file will became a component
 
 // React function as component
-function Header() {
-  return (
-      <h1>This is HEADER</h1>
+function Header(props) {
+  return ( // Will retunr only one element use <div> for that or <React.Fragment>, no create extra container
+    <React.Fragment>
+      <h1>{props.info}</h1>
+      <h2>My number is: {props.myNumber}</h2>
+    </React.Fragment>
   );
 }
 // Need to export before to use
