@@ -6,8 +6,18 @@ class Footer extends Component { // props are inherited from Component
 
   //
   state = {
-    name: 'Pedro',
+    name: '',
     age: '54'
+  }
+
+  // Live cycle methods
+  componentDidMount() {
+    this.setState({name: 'MyName'})
+    // Subscribe here
+  }
+
+  componentWillUnmount() {
+    // Unsubscribe here
   }
 
   createAlert() {
@@ -15,7 +25,7 @@ class Footer extends Component { // props are inherited from Component
   }
 
   // Arrow function
-  changed = evt => {
+  changed = (evt) => {
     this.setState({name: evt.target.value})
     console.log('changed', this.state.name);
   }
