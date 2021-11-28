@@ -4,8 +4,7 @@ import React from 'react' // Anything inside this file will became a component
 function Header(props) {
   return ( // Will retunr only one element use <div> for that or <React.Fragment>, no create extra container
     <React.Fragment>
-      <h1>{props.info}</h1>
-      <h2>My number is: {props.myNumber}</h2>
+      <h1>{ props.info }</h1>
     </React.Fragment>
   );
 }
