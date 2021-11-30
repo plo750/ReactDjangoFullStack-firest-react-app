@@ -9,12 +9,14 @@ function createAlert() {
   alert('Hello, you clicked me from parent');
 }
 
+/*
 function ShowMessage(props) {
   if(props.toShow)
     return <h2>My Message</h2>
   else
     return <h2>Forbidden</h2>
 }
+*/
 
 function App() {
     return (
