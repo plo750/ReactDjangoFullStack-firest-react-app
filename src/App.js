@@ -22,7 +22,7 @@ function App() {
         <Header info="This is my message" />
         <p>main content</p>
         <Footer trademark="Page made by Pedro" myAlert={createAlert}/>
-        { /* <ShowMessage toShow={false}/> */ }
+        { /* <ShowMessage toShow={false}/> */  }
       </div>
     );
 }

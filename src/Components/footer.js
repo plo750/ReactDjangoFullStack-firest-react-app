@@ -33,26 +33,21 @@ class Footer extends Component { // props are inherited from Component
 
   // Override render function
   render() {
+
+    const animals = ['cat', 'dog', 'horse']
+
     return (
       <React.Fragment>
-        { this.state.isLogin ? (
-          <React.Fragment>
-            {/* <h2 onClick={this.createAlert}> */}
-            <h2 onClick={this.props.myAlert}>
-              {this.props.trademark}
-            </h2>
-            <input value={this.state.name}
-            onChange={this.changed} type="text" />
-          </React.Fragment>
-        ): (
-            <React.Fragment>
-              {/* <h2 onClick={this.createAlert}> */}
-              <h2>Youn can't see this content</h2>
-              <h2>You must login first</h2>
-            </React.Fragment>
-          )
+        {
+          animals.map( animal => {
+            return (
+              <div key={animal}>
+                { /* Need a unique key in high level */ }
+                <h1>{animal}</h1>
+              </div>
+              );
+          })
         }
-
       </React.Fragment>
     )
   }
