@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { CtxConsumer } from '../index';
 
 // React class as component
 class Footer extends Component { // props are inherited from Component
@@ -33,22 +33,21 @@ class Footer extends Component { // props are inherited from Component
 
   // Override render function
   render() {
-
-    const animals = ['cat', 'dog', 'horse']
-
     return (
-      <React.Fragment>
-        {
-          animals.map( animal => {
-            return (
-              <div key={animal}>
-                { /* Need a unique key in high level */ }
-                <h1>{animal}</h1>
-              </div>
-              );
-          })
-        }
-      </React.Fragment>
+      <CtxConsumer>
+        { (context) => (
+          <div> {/* Return only one element */}
+            { context.animalsArray.map(animal => {
+              return (
+                  <div key={animal}>
+                    <h1>{animal}</h1>
+                  </div>
+                );
+              })
+            }
+          </div>
+          )}
+      </CtxConsumer>
     )
   }
 }

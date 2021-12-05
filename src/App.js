@@ -5,6 +5,7 @@ import Header from './Components/header' // option 2
 import Footer from './Components/footer' // option 2
 
 
+
 function createAlert() {
   alert('Hello, you clicked me from parent');
 }
